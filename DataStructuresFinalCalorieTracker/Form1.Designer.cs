@@ -41,7 +41,7 @@
             // 
             // btnAddFood
             // 
-            btnAddFood.Location = new Point(235, 185);
+            btnAddFood.Location = new Point(24, 126);
             btnAddFood.Name = "btnAddFood";
             btnAddFood.Size = new Size(112, 34);
             btnAddFood.TabIndex = 0;
@@ -51,7 +51,7 @@
             // 
             // txtFoodName
             // 
-            txtFoodName.Location = new Point(235, 87);
+            txtFoodName.Location = new Point(136, 28);
             txtFoodName.Name = "txtFoodName";
             txtFoodName.Size = new Size(150, 31);
             txtFoodName.TabIndex = 1;
@@ -59,7 +59,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(123, 93);
+            label1.Location = new Point(24, 34);
             label1.Name = "label1";
             label1.Size = new Size(106, 25);
             label1.TabIndex = 2;
@@ -69,16 +69,16 @@
             // 
             FirstDailyLog.FormattingEnabled = true;
             FirstDailyLog.ItemHeight = 25;
-            FirstDailyLog.Location = new Point(587, 42);
+            FirstDailyLog.Location = new Point(314, 12);
             FirstDailyLog.Name = "FirstDailyLog";
-            FirstDailyLog.Size = new Size(180, 129);
+            FirstDailyLog.Size = new Size(180, 279);
             FirstDailyLog.TabIndex = 3;
             FirstDailyLog.SelectedIndexChanged += FirstDailyLog_SelectedIndexChanged;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(123, 132);
+            label2.Location = new Point(24, 73);
             label2.Name = "label2";
             label2.Size = new Size(74, 25);
             label2.TabIndex = 4;
@@ -86,16 +86,17 @@
             // 
             // btnSortList
             // 
-            btnSortList.Location = new Point(235, 225);
+            btnSortList.Location = new Point(314, 350);
             btnSortList.Name = "btnSortList";
             btnSortList.Size = new Size(112, 34);
             btnSortList.TabIndex = 5;
             btnSortList.Text = "Sort List";
             btnSortList.UseVisualStyleBackColor = true;
+            btnSortList.Click += btnSortList_Click_1;
             // 
             // btnClearLog
             // 
-            btnClearLog.Location = new Point(235, 265);
+            btnClearLog.Location = new Point(142, 126);
             btnClearLog.Name = "btnClearLog";
             btnClearLog.Size = new Size(112, 34);
             btnClearLog.TabIndex = 6;
@@ -104,7 +105,7 @@
             // 
             // txtCalories
             // 
-            txtCalories.Location = new Point(235, 129);
+            txtCalories.Location = new Point(136, 70);
             txtCalories.Name = "txtCalories";
             txtCalories.Size = new Size(150, 31);
             txtCalories.TabIndex = 7;
@@ -112,7 +113,7 @@
             // lblTotalCalories
             // 
             lblTotalCalories.AutoSize = true;
-            lblTotalCalories.Location = new Point(587, 183);
+            lblTotalCalories.Location = new Point(314, 307);
             lblTotalCalories.Name = "lblTotalCalories";
             lblTotalCalories.Size = new Size(135, 25);
             lblTotalCalories.TabIndex = 8;
@@ -123,7 +124,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(542, 422);
             Controls.Add(lblTotalCalories);
             Controls.Add(txtCalories);
             Controls.Add(btnClearLog);

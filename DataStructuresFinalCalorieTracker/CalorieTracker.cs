@@ -12,7 +12,11 @@ public class CalorieTracker
             FoodDatabase.Add(name, new FoodItem(name, calories));
         }
     }
-
+    public FoodItem GetFoodItemFromDatabase(string name)
+    {
+        FoodDatabase.TryGetValue(name, out FoodItem item);
+        return item;
+    }
     public void AddFoodToLog(string name)
     {
         if (FoodDatabase.TryGetValue(name, out FoodItem item))
