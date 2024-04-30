@@ -3,12 +3,22 @@
 public class DailyLog
 {
     public LinkedList<FoodItem> FoodItems { get; set; } = new LinkedList<FoodItem>();
-
+    public Stack<FoodItem> RecentFoodItems { get; set; } = new Stack<FoodItem>();
     public void AddFoodItem(FoodItem item)
     {
         FoodItems.AddLast(item); // Add the food item to the end of the list
+        RecentFoodItems.Push(item);
     }
-
+    public FoodItem RemoveRecentFoodItem()
+    {
+        if (RecentFoodItems.Count > 0)
+        {
+            FoodItem itemToRemove = RecentFoodItems.Pop();
+            FoodItems.Remove(itemToRemove);
+            return itemToRemove;
+        }
+        return null;
+    }
     public int TotalCalories()
     {
         return FoodItems.Sum(item => item.Calories);

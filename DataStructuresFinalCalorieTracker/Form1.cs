@@ -77,6 +77,25 @@ namespace DataStructuresFinalCalorieTracker
         {
 
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUndo_Click_1(object sender, EventArgs e)
+        {
+            FoodItem removedItem = calorieTracker.GetDailyLog().RemoveRecentFoodItem();
+
+            if (removedItem == null)
+            {
+                MessageBox.Show("There is nothing to undo.", "Undo Action", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                UpdateDailyLogUI();
+            }
+        }
     }
 
 }

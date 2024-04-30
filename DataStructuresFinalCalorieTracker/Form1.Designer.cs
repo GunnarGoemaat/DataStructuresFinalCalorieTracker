@@ -37,6 +37,7 @@
             btnClearLog = new Button();
             txtCalories = new TextBox();
             lblTotalCalories = new Label();
+            btnUndo = new Button();
             SuspendLayout();
             // 
             // btnAddFood
@@ -86,6 +87,7 @@
             // 
             // btnSortList
             // 
+            btnSortList.ImageAlign = ContentAlignment.BottomCenter;
             btnSortList.Location = new Point(314, 350);
             btnSortList.Name = "btnSortList";
             btnSortList.Size = new Size(112, 34);
@@ -120,11 +122,22 @@
             lblTotalCalories.Text = "Total Calories: 0";
             lblTotalCalories.Click += TotalCalories_Click;
             // 
+            // btnUndo
+            // 
+            btnUndo.Location = new Point(24, 166);
+            btnUndo.Name = "btnUndo";
+            btnUndo.Size = new Size(112, 34);
+            btnUndo.TabIndex = 9;
+            btnUndo.Text = "Undo";
+            btnUndo.UseVisualStyleBackColor = true;
+            btnUndo.Click += btnUndo_Click_1;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(542, 422);
+            Controls.Add(btnUndo);
             Controls.Add(lblTotalCalories);
             Controls.Add(txtCalories);
             Controls.Add(btnClearLog);
@@ -136,6 +149,7 @@
             Controls.Add(btnAddFood);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -151,5 +165,6 @@
         private Button btnClearLog;
         private TextBox txtCalories;
         private Label lblTotalCalories;
+        private Button btnUndo;
     }
 }
