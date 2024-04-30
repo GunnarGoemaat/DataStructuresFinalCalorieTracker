@@ -83,6 +83,11 @@ namespace DataStructuresFinalCalorieTracker
 
         }
 
+        private void btnUndo_Click(object sender, EventArgs e)
+        {
+            
+        }
+
         private void btnUndo_Click_1(object sender, EventArgs e)
         {
             FoodItem removedItem = calorieTracker.GetDailyLog().RemoveRecentFoodItem();

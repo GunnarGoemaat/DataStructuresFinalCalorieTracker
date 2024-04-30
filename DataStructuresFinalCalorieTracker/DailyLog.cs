@@ -28,7 +28,7 @@ public class DailyLog
     // Insertion sort algorithm for sorting the food items in the log.
     public void SortByCalories()
     {
-        if (FoodItems.First == null) return; // No need to sort if the list is empty
+        if (FoodItems.First == null) return; // Check if empty
 
         bool swapped;
         do
@@ -38,7 +38,7 @@ public class DailyLog
 
             while (node.Next != null)
             {
-                if (node.Value.Calories > node.Next.Value.Calories)
+                if (node.Value.Calories < node.Next.Value.Calories)
                 {
                     // Swap nodes by swapping the values they hold
                     var temp = node.Value;
